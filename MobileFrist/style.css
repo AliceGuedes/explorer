@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --ff-heading: 'Staatliches', cursive;
+    --ff-texting: 'Palanquin';
+
+    font-size: 62.5%;
+    --fs-body: 1.8rem;
+    --fs-heading: 4.0rem;
+    --fs-heading-sm: 2.0rem;
+
+    --fc-banner: hsl(0, 0%, 100%);
+    --fc-main: hsl(274, 84%, 12%);
+    --fc-card-tag: hsl(232, 17%, 35%);
+    
+    --bg-primary: hsl(233, 100%, 97%);
+    --bg-secundary: hsl(218, 17%, 62%);
+    --bg-banner: hsl(275, 18%, 79%);
+    --bg-card-tag: hsl(312, 91%, 96%);
+}
+
+.page{
+    max-width: 412px;
+    
+}
+
+header{
+background: var(--bg-secundary);
+
+height: 27.9rem;
+width: auto;
+
+padding: 3.2rem 0 3.2rem 0;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+}
+
+h1{
+    background: var(--bg-banner);
+
+    padding: 4px; ;
+
+    font-family: var(--ff-heading);
+    font-size: var(--fs-heading);
+    color: var(--fc-banner);
+    font-weight: 400;
+    
+    line-height: 34px;
+    letter-spacing: 0.05em;
+
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+    width: 100%;
+    text-align: center;
+
+}
+body{
+    background: var(--bg-primary);
+
+}
+
+main{
+    padding: 1.4rem 3.2rem  6.0rem ;
+
+    display: grid;
+    gap: 3.2rem;
+    
+}
+
+main p{
+    min-width: 30.5rem;
+    
+
+    font-family: var(--ff-texting);
+    font-size: var(--fs-body);
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: var(--fc-main);
+
+    text-align: center;
+
+
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+   
+    font-family: var(--ff-heading);
+    font-size: var(--fs-heading-sm);
+    color: var(--fc-card-tag);
+    
+    position: relative;
+
+    transition: transform 200ms;
+}
+
+
+.card h2{
+
+    position: absolute;
+    top: 1.6rem;
+    left: 16.0rem;
+
+    padding: 0.5rem 2.3rem;
+    border-radius: 20px;
+
+    background: var(--bg-card-tag);
+    font-weight: 400;
+
+    line-height: 34px;
+    letter-spacing: 0.05em;
+
+       
+
+}
+
+.card:hover {
+    transform: scale(1.1);
+    
+}
+
+.card img{
+    animation-name: leftright;
+    animation-duration: 700ms;
+}
+
+.card h2{
+    animation-name: rightleft;
+    animation-duration: 700ms;
+}
+
+@keyframes leftright {
+    0% {
+      opacity: 0.3;
+      transform: translateX(-15px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes rightleft {
+    0% {
+      opacity: 0;
+      transform: translateX(15px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
