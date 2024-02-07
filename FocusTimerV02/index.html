@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="./src/main.js"></script>
+
+    <title>FocusTimer - Contador Pomodoro</title>
+
+    
+
+</head>
+<body>
+    <div id="app">
+    
+
+        <section id="timer" class="flex">
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+        </section>
+
+        <section id="controls" class="flex">
+            <button id="startButton" class="ph ph-play-circle">
+                <span class="sr-only">iniciar contador</span>
+            </button>   
+
+            <button id="stopButton" class="ph ph-stop-circle">
+                <span class="sr-only">Parar contador</span>
+            </button>
+
+            <button id="plusFive" class="ph ph-plus-circle">
+                <span class="sr-only">mais 5 minutos</span>
+            </button>
+
+            <button id="minusFive" class="ph ph-minus-circle">
+                <span class="sr-only">menos 5 minutos</span>
+            </button>           
+
+        </section>
+    </div>     
+    <div id="appMusic">
+
+        
+            <button id="floresta" class="ph ph-tree ">
+                <span class="sr-only">floresta</span>
+            </button>    
+
+            <button id="chuva" class="ph ph-cloud-snow ">
+                <span class="sr-only">Chuva</span>
+            </button> 
+
+            <button id="coffee" class="ph ph-coffee ">
+                <span class="sr-only">Cafeteria</span>
+            </button> 
+
+            <button id="fire" class="ph ph-flame ">
+                <span class="sr-only">Lareira</span>
+            </button> 
+        
+            <audio id="audioFloresta" loop>
+                <source src="./assets/Floresta.wav" type="">
+                Your browser does not support the audio element.
+              </audio>
+              
+              <audio id="audioChuva" loop>
+                <source src="./assets/Chuva.wav" type="">
+                Your browser does not support the audio element.
+              </audio>
+              
+              <audio id="audioCoffee" loop>
+                <source src="./assets/Cafeteria.wav" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+              
+              <audio id="audioFire" loop>
+                <source src="./assets/Lareira.wav" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+              
+
+    </div>
+
+</body>
+</html>
