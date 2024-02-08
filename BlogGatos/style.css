@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+:root {
+    font-size: 62.5%;
+    
+    --hue: 195;
+    --color-base-white: hsl(0, 0%, 100%);
+    --color-base-blue: hsl(var(--hue), 46%, 40%);
+    --color-base-blue-200: hsl(var(--hue), 33%, 53%);
+    --color-base-black: hsl(240, 5%, 7%);
+}
+
+body{
+    font-family: 'Mulish', sans-serif;
+    background-color: var(--color-base-white);
+    color: var(--color-base-black);
+}
+
+#app{
+    display: grid;
+    height: 100vh;
+}
+
+.container{
+    background-color: var(--color-base-blue);
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    align-items: center;
+    
+    height: 7.2rem;
+    
+    gap: 2rem;
+    font-weight: 700;
+ }
+
+ .logo{
+    margin-left: 3.2rem;
+ }
+ 
+  
+.input-wrapper label {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+  }
+  
+.input-wrapper input {
+    width: 100%;
+    padding: 1.6rem;
+  
+    background-color: var(--color-base-blue-200);
+    border: 0;
+    border-radius: 0.6rem;
+  
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+  
+.input-wrapper input::placeholder {
+    opacity: 0.56;
+    color: var(--color-base-white);
+  }
+  
+.avatar {
+    width: 4.2rem;
+    height: 4.2rem;
+  
+    object-fit: cover;
+  
+    border-radius: 50%;
+
+    margin-right: 3.2rem;
+  }
+
+.main{
+    
+    margin-right: 2.4rem;
+    margin-right: 2.4rem;
+    
+    width: 380px;
+    font-size: 1.6rem;
+}
+
+.main .gato{
+    background-size: cover;
+}
+
+.main div{
+    margin-left: 1.6rem;
+}
+
+
+.main h1{
+    font-size: 2.4rem;
+    padding-top: 2.4rem;
+    padding-bottom: .8rem;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+    
+}
+
+#artigoPrincipal p{
+    padding-top: 3.2rem;
+    
+}
+
+#sideBar{
+    margin-top: 3.2rem;
+    margin-left: 1.6rem;
+    margin-right: 2.4rem;
+
+    font-size: 1.4rem;
+   
+}
+
+#sideBar h2{
+    padding-bottom: 3.2rem;
+    font-size: 2.4rem;
+}
+
+#sideBar a{
+    text-decoration: none;
+    color: var(--color-base-black);
+
+    margin-bottom: 3.2rem;
+
+    display: flex;
+}
+
+#sideBar div{
+    margin-left: 1.6rem;
+
+    width: 216px;
+}
+
+#sideBar h3{
+    padding-bottom: .8rem;
+}
+
+
+.footer{
+    background-color: var(--color-base-blue);
+
+    padding: 2.6rem;
+        
+    text-align: center;
+
+    font-size: 1.6rem;
+    color: var(--color-base-white);
+}
+@media(min-width: 415px){
+
+    #app{
+        display: gird;
+        grid-template-areas:
+        "container  container"
+        "main sidebar"
+        "footer  footer";
+
+    }
+
+    .container{
+        grid-area: container;
+    }
+
+    .main{
+        grid-area: main;
+
+        margin-left: 12rem;
+        width: 80rem;
+    }
+    
+    .main .gato{
+        
+        width: 80rem;
+    }
+    .sidebar{
+        grid-area: sidebar;
+    }
+
+    .footer{
+        grid-area: footer;
+
+        margin-top: 4rem;
+    }
+
+}
