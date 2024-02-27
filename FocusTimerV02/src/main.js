@@ -20,7 +20,7 @@ function updateTimer() {
   seconds--;
   if (seconds < 0) {
     clearInterval(timerInterval);
-    alert("HORA DA PAUSA!!");
+    alert("TIME TO REST!!");
     return;
   }
   timerElement.textContent = formatTime(seconds);
